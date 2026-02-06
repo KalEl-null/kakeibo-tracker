@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kakeibo Tracker</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 40px;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        p {
+            color: #555;
+        }
+
+        input {
+            padding: 6px;
+            width: 220px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 6px 12px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        ul {
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Kakeibo Tracker</h1>
+        <p>A simple personal expense tracking application</p>
+    </header>
+
+    <main>
+        <form onsubmit="addExpense(); return false;">
+
+            <label for="expenseName">Expense Name:</label><br>
+            <input type="text" id="expenseName"><br>
+
+            <label for="expenseAmount">Amount:</label><br>
+            <input type="number" id="expenseAmount"><br>
+
+            <button type="submit">Add Expense</button>
+
+        </form>
+
+        <h2>Total: ₹ <span id="total">0</span></h2>
+
+        <ul id="expenseList"></ul>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
